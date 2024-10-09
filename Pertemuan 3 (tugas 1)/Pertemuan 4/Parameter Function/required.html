@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Required Parameter</title>
+</head>
+<body>
+    <script>
+        const halo = nama => `Halo ${nama}!`;
+
+        const penjumlahan = (a, b) => a + b;
+
+        const luaslingkaran = radius => {
+            const P1 = 22 / 7;
+            return P1 * radius ** 2;
+        }
+
+        var nama = prompt("Masukkan nama")
+        document.write(halo(nama), "<br>");   
+
+        document.write(penjumlahan(5, 3), "<br>");   
+           
+        document.write(luaslingkaran(7));        
+    </script>
+</body>
+</html>

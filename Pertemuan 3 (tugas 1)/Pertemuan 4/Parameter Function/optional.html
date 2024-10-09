@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Parameter</title>
+</head>
+<body>
+    <script>
+        const penjumlahan = (a, b = 0) => a + b;
+
+        // Contoh pemanggilan fungsi
+        var hasil = penjumlahan(4, 3);
+        document.write("Hasil penjumlahan (4 + 3) = " + hasil + "<br>");
+
+        var hasil = penjumlahan(4);
+        document.write("Hasil penjumlahan (4 + 0) = " + hasil + "<br>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow Argument</title>
+</head>
+<body>
+    <script>
+        const penjumlahan = (a, b) => a + b;
+        let hasil = penjumlahan(3, 4, 5, 6); //argumen yang lebih tidak akan diproses
+
+        alert(`Hasil penjumlahan adalah ${hasil}`);
+    </script>
+</body>
+</html>
