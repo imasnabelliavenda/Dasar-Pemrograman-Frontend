@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 1</title>
+</head>
+<body>
+    <h2>Mengurutkan angka dan huruf secara ascending</h2>
+    <p>Angka : 20, 10, 3, 30, 58, 42, 6, 9</p>
+    <p>Huruf : z, a, c, g, p</p>
+    <script>
+        const angka = [20, 10, 3, 30, 58, 42, 6, 9]
+        const huruf = ['z', 'a', 'c', 'g', 'p']
+
+        angka.sort(function (a, b) {return a-b});
+        document.write("Angka terurut: ", angka.toString())
+        document.write("<br>")
+
+        huruf.sort();
+        document.write("Huruf terurut: ", huruf)
+    </script>
+</body>
+</html>
