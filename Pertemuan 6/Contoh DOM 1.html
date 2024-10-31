@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh DOM Toggle</title>
+</head>
+<body>
+    <p id="demo">Selamat Pagi</p>
+    <button onclick="Ganti()">Ganti</button>
+
+    <script>
+        function Ganti() {
+            const demoElement = document.getElementById('demo');
+            if (demoElement.innerHTML === "Selamat Pagi") {
+                demoElement.innerHTML = "Hello World!";
+            } else {
+                demoElement.innerHTML = "Selamat Pagi";
+            }
+        }
+    </script>
+</body>
+</html>
