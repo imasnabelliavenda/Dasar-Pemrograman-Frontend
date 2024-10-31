@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax dengan jQuery</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <div id="main" data-loading="true"></div>
+
+    <form>
+        <select name="package" id="package">
+            <option data-price="100000" data-discount="10" data-pajak="5">Paket 1</option>
+            <option data-price="150000" data-discount="10" data-pajak="10">Paket 2</option>
+            <option data-price="200000" data-discount="10" data-pajak="15">Paket 3</option>
+        </select>
+        <table>
+            <tr>
+                <td>Harga</td>
+                <td>:</td>
+                <td><input type="text" name="price" readonly></td>
+            </tr>
+            <tr>
+                <td>Pajak</td>
+                <td>:</td>
+                <td><input type="text" name="pajak" readonly></td>
+            </tr>
+            <tr>
+                <td>Discount</td>
+                <td>:</td>
+                <td><input type="text" name="discount" readonly></td>
+            </tr>
+            <tr>
+                <td><h4>Total</h4></td>
+                <td>:</td>
+                <td><span id="total">0</span></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        $('#package').on('change', function(){
+            const price = $('#package option:selected').data('price');
+            const pajak = $('#package option:selected').data('pajak');
+            const discount = $('#package option:selected').data('discount');
+            
+            const totalPajak = (price * pajak/100)
+            const setelahPajak = price + totalPajak
+            const totalDiscount = (setelahPajak * discount/100)
+
+            const total = setelahPajak - totalDiscount;
+
+            $('[name=price]').val(price);
+            $('[name=discount]').val(totalDiscount);
+            $('[name=pajak]').val(totalPajak);
+
+            $('#total').text(`Rp. ${total}`);
+        })
+    </script>
+</body>
+</html>
