@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengambil nilai HTML dan menambahkan ditempat lain</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#tambah").click(function(){
+                var nilai = $("#nama_kota").val();
+                var baris_baru = "<tr><td>" + nilai + "</td></tr>";
+                $("#tabel_kota").append(baris_baru);
+            });
+        });
+    </script>
+    <style>
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 5px 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <label>Kota :</label>
+    <input type="text" id="nama_kota" value="">
+    <button id="tambah">Tambah kota</button>
+    <table id="tabel_kota">
+        <tr><th>Nama Kota</th></tr>
+        <tr><td>Bandung</td></tr>
+        <tr><td>Jakarta</td></tr>
+        <tr><td>Makasar</td></tr>
+        <tr><td>Medan</td></tr>
+    </table>
+</body>
+</html>

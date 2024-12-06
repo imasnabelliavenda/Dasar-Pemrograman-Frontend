@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Gambar</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <style>
+        h2 {
+            margin-bottom: 30px;
+            color: #343a40;
+        }
+        .container {
+            padding-top: 20px;
+        }
+        .isi {
+            margin-bottom: 30px;
+        }
+        .isi img {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn-warning {
+            margin-top: 10px;
+        }
+        .modal-header {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .modal-title {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Animation Movie</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 text-center">
+            <div class="col isi">
+                <img src="https://i.pinimg.com/736x/5d/e2/de/5de2de3d3a78af4e6748ec1a21a88917.jpg" class="img-fluid">
+                <h5 class="mt-2">Howl's Moving Castle</h5>
+                <button class="btn btn-warning tombol_klik" 
+                        data-toggle="modal" data-target="#modalGambar" 
+                        data-title="Howl"
+                        data-gmb="https://i.pinimg.com/originals/de/76/b8/de76b85b7b8eef0d4323b81562aab259.gif"
+                        data-desc="Film ini berlatar di kerajaan fiksi tempat sihir, dengan latar belakang perang dengan kerajaan lain. Film ini menceritakan kisah Sophie, seorang pembuat topi muda yang berubah menjadi wanita tua oleh seorang penyihir yang memasuki tokonya dan mengutuknya.">
+                    Lihat Detail
+                </button>
+            </div>
+            <div class="col isi">
+                <img src="https://i.pinimg.com/736x/53/9a/e3/539ae3093d3f6b120a69000f0ff37d21.jpg" class="img-fluid">
+                <h5 class="mt-2">Ponyo on the Cliff</h5>
+                <button class="btn btn-warning tombol_klik" 
+                        data-toggle="modal" data-target="#modalGambar" 
+                        data-title="Ponyo"
+                        data-gmb="https://i.pinimg.com/originals/1c/78/4e/1c784ebf33035bae23ea76f1926156c0.gif"
+                        data-desc="Film ini mengisahkan Ponyo, seekor ikan mas yang lepas dari lautan dan ditolong oleh seorang anak laki-laki manusia berusia lima tahun, Sōsuke, setelah ia terdampar di pantai saat terjebak dalam toples kaca. Saat mereka menjalin ikatan satu sama lain, Ponyo ingin menjadi seorang gadis manusia, melawan keadaan yang menghancurkan akibat perolehan dan penggunaan sihirnya.">
+                    Lihat Detail
+                </button>
+            </div>
+            <div class="col isi">
+                <img src="https://i.pinimg.com/736x/93/6b/c2/936bc2c8a46385dddd69ecaa1fe1d2d5.jpg" class="img-fluid">
+                <h5 class="mt-2">Spirited Away</h5>
+                <button class="btn btn-warning tombol_klik" 
+                        data-toggle="modal" data-target="#modalGambar" 
+                        data-title="Spirited Away"
+                        data-gmb="https://i.pinimg.com/originals/92/54/35/92543500291d623df666dd2b5958d717.gif"
+                        data-desc="Spirited Away menceritakan kisah Chihiro, seorang gadis berusia sepuluh tahun yang saat pindah ke lingkungan baru secara tidak sengaja memasuki dunia roh. Setelah orang tuanya diubah menjadi babi oleh penyihir Yubaba, Chihiro mengambil pekerjaan di pemandian umum Yubaba untuk menemukan cara untuk membebaskan dirinya dan orang tuanya dan kembali ke dunia manusia.">
+                    Lihat Detail
+                </button>
+            </div>
+            <div class="col isi">
+                <img src="https://i.pinimg.com/736x/c2/0c/f7/c20cf7dea496252dcd12e3c7dd2c993f.jpg" class="img-fluid">
+                <h5 class="mt-2">Suzume no Tojimari</h5>
+                <button class="btn btn-warning tombol_klik" 
+                        data-toggle="modal" data-target="#modalGambar" 
+                        data-title="Suzume"
+                        data-gmb="https://64.media.tumblr.com/9e8b33a7572cea269880ec1c82c49236/0caa19deccc71f92-ae/s540x810/2206a8d86881cf853caffc6dc7f53c78f07bf50f.gifv"
+                        data-desc="Suzume no Tojimari / Suzume's Locking Up menceritakan tentang gadis SMA berusia 17 tahun Suzume Iwato dan lelaki muda tak dikenal Souta Munakata, yang bekerja sama untuk mencegah serangkaian bencana di seluruh Jepang dengan menyegel pintu dari cacing supernatural raksasa yang menyebabkan gempa bumi setelah dilepaskan.">
+                    Lihat Detail
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalGambar" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 id="parse-title" class="modal-title"></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="parse-src" class="img-fluid mb-3" alt="Media">
+                    <p id="parse-desc"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".tombol_klik").click(function (e) {
+                e.preventDefault();
+                var title = $(this).data("title");
+                var gmb = $(this).data("gmb");
+                var desc = $(this).data("desc");
+
+                $("#parse-title").text(title);
+                $("#parse-src").attr("src", gmb);
+                $("#parse-desc").text(desc);
+
+                $("#modalGambar").modal();
+            });
+        });
+    </script>
+</body>
+</html>
