@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Widget Accordion dengan JQuery UI</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery-ui/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Membuat Widget Accordion dengan JQuery UI</h1>
+    <div id="widget-accordion">
+        <h3>Section 1</h3>
+        <div>
+            <p>
+                <h4>Section 1</h4>
+                Ini Section 1 - Akordeon terdiri dari panel yang disusun menjadi baris dan kolom tata letak.
+                Setiap panel atau item akordeon memiliki badan dan tajuk dan dapat diperluas dan diciutkan sepenuhnya dengan mengklik tajuknya.
+                Anda dapat menempatkan teks atau komponen apapun ke dalam setiap panel. Komponen tersebut mewarisi dari tata letak. 
+            </p>
+        </div>
+
+        <h3>Section 2</h3>
+        <div>
+            <p>
+                <h4>Section 2</h4>
+                Ini Section 2 - Akordeon berbeda karena kemampuannya untuk menampilkan dan menyembunyikan panel secara bersamaan.
+                Ada parameter multi khusus untuk mengatur mode yang diperlukan.
+            </p>
+        </div>
+
+        <h3>Section 3</h3>
+        <div>
+            <p>
+                <h4>Section 3</h4>
+                Ini Section 3 - Akordeon terdiri dari panel yang disusun menjadi baris dan kolom tata letak.
+                Setiap panel atau item akordeon memiliki badan dan tajuk dan dapat diperluas dan diciutkan sepenuhnya dengan mengklik tajuknya.
+                Anda dapat menempatkan teks atau komponen apapun ke dalam setiap panel. Komponen tersebut mewarisi dari tata letak. 
+            </p>
+            <ul>
+                <li>List item satu</li>
+                <li>List item dua</li>
+                <li>List item tiga</li>
+            </ul>
+        </div>
+
+        <h3>Section 4</h3>
+        <div>
+            <p>
+                <h4>Section 4</h4>
+                Ini Section 4 - Akordeon berbeda karena kemampuannya untuk menampilkan dan menyembunyikan panel secara bersamaan.
+                Ada parameter multi khusus untuk mengatur mode yang diperlukan.
+            </p>
+            <p>Membuat widget accordion dengan jquery ui</p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#widget-accordion").accordion();
+    });
+</script>
+</html>
