@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Website Dinamis</title>
+</head>
+<body>
+    <nav>
+        <a href="main">Home</a>
+        <a href="">Kontak</a>
+        <a href="">Tentang Kami</a>
+    </nav>
+    <hr>
+    <header style="text-align: center;">
+        <img src="{{ url_for('static', filename='img/icon.jpg')}}" width="250px" height="250px" style="border-radius: 50%;">
+        <h1>Love Game in Eatern Fantasy</h1>
+    </header>
+    <hr>
+    <article style="text-align: center;">
+        <h2>Tentang Drama</h2>
+        <p>Bercerita tentang Ling Miao Miao yang secara tidak sengaja memasuki sistem misi novel Monster Hunting dan menjadi karakter pendukung yang jahat. Untuk kembali ke dunia nyata, dia harus menyelesaikan tugas sistem—memenangkan pemuda misterius dan kejam, Mu Sheng.
+            Sepanjang jalan mereka bekerja sama dengan Mu Yao, anggota keluarga pemburu monster, dan Liu Fu Yi, seorang pemburu monster. Bersama-sama, mereka melawan monster dan naik level. Seiring kemajuan misi, mereka secara bertahap menyelesaikan permusuhan antara manusia dan monster, menulis ulang akhir yang ditakdirkan dan menyelamatkan dunia.</p>
+    </article>
+    <div style="max-width: 600px; margin: 3em auto;">
+        <table border="1" width="100%">
+            <thead>
+                <tr>
+                    <th colspan="2">Karakter</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in container %}
+                <tr>
+                    <td>
+                        <ul>{{ row[1] }}</ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>
+                                <img src="{{ url_for('static', filename='img/' + row[2])}}" width="150px" height="150px" style="border-radius: 40px;">
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+    </div>    
+    <hr>
+    <footer style="text-align: center;">
+        <p>Copyright &copy; imasnabellia</p>
+    </footer>
+</body>
+</html>
